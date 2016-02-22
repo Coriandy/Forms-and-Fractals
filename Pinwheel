@@ -1,0 +1,36 @@
+import turtle
+
+def draw_petal (some_turtle):
+    for i in range (0,2):
+        some_turtle.forward(150)
+        some_turtle.left(170)
+
+def draw_flower():
+    window = turtle.Screen()
+    window.bgcolor("red")
+    
+    mur = turtle.Turtle()
+    mur.shape("turtle")
+    mur.color("yellow")
+    mur.speed(6)
+
+    for i in range (0,12):
+        mur.forward(60)
+        mur.left(30)
+        draw_petal(mur)
+        mur.right(170)
+        mur.forward(60)
+        mur.left(10)
+    mur.backward(5)
+    mur.right(90)
+    mur.forward(300)
+    mur.left(90)
+    mur.forward(4)
+    mur.right(270)
+    mur.forward(300)
+    mur.right(180)
+    mur.forward(300)
+
+    window.exitonclick()
+    
+draw_flower()
