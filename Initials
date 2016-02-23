@@ -5,25 +5,24 @@ def draw_initials():
     window.bgcolor("black")
 
     #Draw A
-    a = turtle.Turtle()
-    a.color("white")
-    a.speed(10)
-    
-    a.left(60)
-    a.forward(100)
-    a.right(120)
-    a.forward(100)
-    a.backward(40)
-    a.left(240)
-    a.forward(60)
-
-    #Draw F
     f = turtle.Turtle()
     f.color("white")
-    f.speed(1)
+    f.speed(10)
+    
+    f.left(60)
+    f.forward(100)
+    f.right(120)
+    f.forward(100)
+    f.backward(40)
+    f.left(240)
+    f.forward(60)
+
+    #Draw F
+
     f.penup()
     f.setx(120)
     f.sety(0)
+    f.left(180)
     f.pendown()
 
     f.left(90)
@@ -38,5 +37,5 @@ def draw_initials():
 
 
     window.exitonclick()
-
+    
 draw_initials()
