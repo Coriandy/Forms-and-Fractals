@@ -1,0 +1,40 @@
+import turtle
+
+def draw_petals (some_turtle, some_size):    
+    for i in range (0,2):
+        some_turtle.forward(some_size)
+        some_turtle.right(60)
+        some_turtle.forward(some_size)
+        some_turtle.right(120)
+        
+def draw_form():
+    window = turtle.Screen()
+    window.bgcolor("white")
+    
+    luffy = turtle.Turtle()
+    luffy.shape("turtle")
+    luffy.speed(10)
+
+    for i in range (0, 36):
+        luffy.color("green")
+        size = 120
+        draw_petals(luffy, size)
+        luffy.left(10)
+    for i in range (0, 36):
+        luffy.color("orange")
+        size = 70
+        draw_petals(luffy, size)
+        luffy.left(10)
+    for i in range (0, 36):
+        luffy.color("blue")
+        size = 40
+        draw_petals(luffy, size)
+        luffy.left(10)
+    for i in range (0, 36):
+        luffy.color("red")
+        size = 23
+        draw_petals(luffy, size)
+        luffy.left(10)
+
+    window.exitonclick()
+draw_form()
