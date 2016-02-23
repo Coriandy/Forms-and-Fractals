@@ -1,0 +1,31 @@
+import turtle
+
+window = turtle.Screen()
+window.bgcolor("black")
+tri = turtle.Turtle()
+tri.color("white")
+tri.speed(10)    
+    
+def draw_sierp(size, depth):
+
+    if depth == 0:
+        for i in range (0,3):
+            tri.forward(size)
+            tri.left(120)
+        return
+    else:
+        draw_sierp(size/2, depth-1)
+        tri.forward(size/2)
+        draw_sierp(size/2, depth-1)
+        tri.backward(size/2)
+        tri.left(60)
+        tri.forward(size/2)
+        tri.right(60)
+        draw_sierp(size/2, depth-1)
+        tri.left(60)
+        tri.backward(size/2)
+        tri.right(60)                       
+
+draw_sierp(240, 4)
+
+window.exitonclick()
